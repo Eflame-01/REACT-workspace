@@ -1,0 +1,25 @@
+body{
+    background-color: bisque;
+    margin: 0;
+    height: 100%;
+}
+
+div {
+    margin: 0;
+    height: 100%;
+}
+
+#bggraphic {
+    background: url('/media/zenitsu_image_2.jpg') top left no-repeat;
+    height: 278px;
+    width: 362px;
+    position: absolute;
+    left: 50%;
+    z-index: 100;
+  }
+
+.simple p{
+    font: small-caps bold 1.2rem sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
