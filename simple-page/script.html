@@ -4,10 +4,52 @@
     @import url("style.css");
 </style>
 
-<body>
-    <div class="simple">
-        <p>This is Zenitsu.</p>
-    </div>
-    <img src="/media/zenitsu_image_2.jpg"
-         alt="Picture of Zenitsu">
-</body>
+
+<div id="div">
+    <p class="center">This is Zenitsu.</p>
+    <button name="button"
+            onClick="decideColorToChange()">Change Color</button>
+    <button name="button"
+            onClick="addDiv()">Make Another Div</button>
+    <img src="media/zenitsu_image_2.jpg"
+         alt="Picture of Zenitsu"
+         class="center"></img>
+</div>
+
+<script>
+    //data members needed to perform both methods below.
+    var numPressed = 0;
+    var div = document.getElementById("div");
+    var div2 = document.createElement()
+
+    //changeColor() changes the color of the div tab
+    function changeColor(color){
+        console.log('changing the color to ' + color);
+
+        div.style.background = color;
+    }
+
+    //decideColorTochange() figures out what color to chnage the div tab to
+    function decideColorToChange(){
+        console.log('deciding what to change the color to');
+
+        if(numPressed%2 == 1){
+            changeColor('bisque');
+        }
+        else if(numPressed%2 == 0){
+            changeColor('gold');
+        }
+        numPressed++;
+    }
+
+    //
+    function addDiv(){
+        consol.log('adding another div');
+
+        var anotherDiv = document.createElement('div');
+        anotherDiv.id = "div-2";
+        anotherDiv.color = "red";
+        div.appendChild(anotherDiv);
+    }
+
+</script>
