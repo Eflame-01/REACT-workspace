@@ -5,7 +5,7 @@
  */
 
 
-//data members needed to perform both methods below.
+//data members needed to perform methods below.
 var numPressed = 0;
 var numDiv = 1;
 
