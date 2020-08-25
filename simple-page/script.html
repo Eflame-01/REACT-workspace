@@ -1,10 +1,18 @@
+<!-- script.html just has the 
+    basic elements that will be in
+    the webpage.
+ -->
+ 
 <!DOCTYPE html>
 
-<style type="text/css">
-    @import url("style.css");
-</style>
+<head>
+    <style type="text/css">
+        @import url("style.css");
+    </style>
+    <script src="my-js-scripts.js"></script> 
+</head>
 
-<body>
+<body id ="body">
     <div id="div">
         <p class="center">This is Zenitsu.</p>
         <button name="button"
@@ -17,22 +25,31 @@
     </div>
 </body>
 
-<script>
+<!-- <script>
     //data members needed to perform both methods below.
     var numPressed = 0;
-    var div = document.getElementById("div");
+    var numDiv = 1;
 
-    //changeColor() changes the color of the div tab
+    var div = document.getElementById('div');
+
+    //changeColor() changes the color of the div tabs
     function changeColor(color){
         console.log('changing the color to ' + color);
 
-        div.style.background = color;
+        //get all of the div tabs
+        var divArray = document.getElementsByTagName('div');
+
+        //iterates through the divs and changes the color
+        for(var i = 0; i < divArray.length; i++){
+            divArray[i].style.background = color;
+        }
     }
 
     //decideColorTochange() figures out what color to chnage the div tab to
     function decideColorToChange(){
         console.log('deciding what to change the color to');
 
+        //changes the number from bisque to gold back to back
         if(numPressed%2 == 1){
             changeColor('bisque');
         }
@@ -44,15 +61,19 @@
 
     //addDiv() is supposed to add a new 'div' in the html
     function addDiv(){
-        consol.log('adding another div');
+        console.log('adding another div');
 
-        var div2 = document.createElement("div");
-        div2.id = "div2";
+        //creates the new div and the p that explains the div 
+        var div2 = document.createElement('div');
+        var p2 = document.createElement('p');
 
-        div.appendChild(div2);
+        //configures the p
+        p2.className = 'center';
+        p2.textContent = 'This is another div';
 
-        document.getElementsByTagName('body')[0].appendChild(div);
-
+        //appends p to div and the div to the body
+        div2.appendChild(p2);
+        document.getElementsByTagName('body')[0].appendChild(div2);
     }
 
-</script>
+</script> -->
