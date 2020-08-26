@@ -16,7 +16,7 @@ button{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-block: 5mm;
+    margin-block-end: 5mm;
     width: auto;
     color:black;
 }
