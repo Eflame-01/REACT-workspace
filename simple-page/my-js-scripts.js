@@ -53,4 +53,7 @@ function addDiv(){
     //appends p to div and the div to the body
     div2.appendChild(p2);
     document.getElementsByTagName('body')[0].appendChild(div2);
+
+    numPressed--;
+    decideColorToChange();
 }
